@@ -1,6 +1,6 @@
-# dating-app
+# dating-app #
 
-Team 2
+##Team 2##
 *Dyllan
 *Melvis
 *Curtis
