@@ -16,11 +16,10 @@ public class QuestionOne {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int question_id;
+	private int question_1_id;
 	
 	@Column(nullable = false)
 	private String answer;
-
 	
 	//boilerplate
 	public QuestionOne() {
@@ -28,36 +27,5 @@ public class QuestionOne {
 		// TODO Auto-generated constructor stub
 	}
 
-	public QuestionOne(int question_id, String answer) {
-		super();
-		this.question_id = question_id;
-		this.answer = answer;
-	}
-
-	public QuestionOne(String answer) {
-		super();
-		this.answer = answer;
-	}
-
-	@Override
-	public String toString() {
-		return "QuestionOne [question_id=" + question_id + ", answer=" + answer + "]";
-	}
-
-	public int getQuestion_id() {
-		return question_id;
-	}
-
-	public void setQuestion_id(int question_id) {
-		this.question_id = question_id;
-	}
-
-	public String getAnswer() {
-		return answer;
-	}
-
-	public void setAnswer(String answer) {
-		this.answer = answer;
-	}
 	
 }

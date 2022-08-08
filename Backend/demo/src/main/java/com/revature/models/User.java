@@ -22,42 +22,43 @@ public class User {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int user_id;
+	private int userId;
 	
-	@Column(nullable = false)
+	@Column(name ="username", nullable = false)
 	private String username;
 	
-	@Column(nullable = false)
+	@Column(name ="password", nullable = false)
 	private String password;
 	
-	@Column(nullable = false)
-	private String first_name;
+	@Column(name ="firstName", nullable = false)
+	private String firstName;
 	
-	@Column(nullable = false)
+	@Column(name ="city", nullable = false)
 	private String city;
 	
-	@Column(nullable = false)
+	@Column(name ="state", nullable = false)
 	private String state;
 	
-	@Column(nullable = false)
+	@Column(name ="country", nullable = false)
 	private String country;
 	
-	@Column(nullable = false)
-	private Date date_of_birth;
+	@Column(name ="dateOfBirth", nullable = false)
+	private Date dateOfBirth;
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "question_id")
+	@JoinColumn(name = "question1Id")
 	private QuestionOne questionOne;
 
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "question_id")
+	@JoinColumn(name = "question2Id")
 	private QuestionTwo questionTwo;
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "question_id")
+	@JoinColumn(name = "question3Id")
 	private QuestionThree questionThree;
 
 	
+
 	//boilerplate
 	public User() {
 		super();
@@ -65,57 +66,63 @@ public class User {
 	}
 
 
-	public User(int user_id, String username, String password, String first_name, String city, String state,
-			String country, Date date_of_birth, QuestionOne questionOne, QuestionTwo questionTwo,
+
+	public User(int userId, String username, String password, String firstName, String city, String state,
+			String country, Date dateOfBirth, QuestionOne questionOne, QuestionTwo questionTwo,
 			QuestionThree questionThree) {
 		super();
-		this.user_id = user_id;
+		this.userId = userId;
 		this.username = username;
 		this.password = password;
-		this.first_name = first_name;
+		this.firstName = firstName;
 		this.city = city;
 		this.state = state;
 		this.country = country;
-		this.date_of_birth = date_of_birth;
+		this.dateOfBirth = dateOfBirth;
 		this.questionOne = questionOne;
 		this.questionTwo = questionTwo;
 		this.questionThree = questionThree;
 	}
 
 
-	public User(String username, String password, String first_name, String city, String state, String country,
-			Date date_of_birth, QuestionOne questionOne, QuestionTwo questionTwo, QuestionThree questionThree) {
+
+	public User(String username, String password, String firstName, String city, String state, String country,
+			Date dateOfBirth, QuestionOne questionOne, QuestionTwo questionTwo, QuestionThree questionThree) {
 		super();
 		this.username = username;
 		this.password = password;
-		this.first_name = first_name;
+		this.firstName = firstName;
 		this.city = city;
 		this.state = state;
 		this.country = country;
-		this.date_of_birth = date_of_birth;
+		this.dateOfBirth = dateOfBirth;
 		this.questionOne = questionOne;
 		this.questionTwo = questionTwo;
 		this.questionThree = questionThree;
 	}
+
 
 
 	@Override
 	public String toString() {
-		return "User [user_id=" + user_id + ", username=" + username + ", password=" + password + ", first_name="
-				+ first_name + ", city=" + city + ", state=" + state + ", country=" + country + ", date_of_birth="
-				+ date_of_birth + ", questionOne=" + questionOne + ", questionTwo=" + questionTwo + ", questionThree="
+		return "User [userId=" + userId + ", username=" + username + ", password=" + password + ", firstName="
+				+ firstName + ", city=" + city + ", state=" + state + ", country=" + country + ", dateOfBirth="
+				+ dateOfBirth + ", questionOne=" + questionOne + ", questionTwo=" + questionTwo + ", questionThree="
 				+ questionThree + "]";
 	}
 
 
-	public int getUser_id() {
-		return user_id;
+
+	public int getUserId() {
+		return userId;
 	}
 
 
-	public void setUser_id(int user_id) {
-		this.user_id = user_id;
+
+	public void setUserId(int userId) {
+		this.userId = userId;
 	}
+
 
 
 	public String getUsername() {
@@ -123,9 +130,11 @@ public class User {
 	}
 
 
+
 	public void setUsername(String username) {
 		this.username = username;
 	}
+
 
 
 	public String getPassword() {
@@ -133,19 +142,23 @@ public class User {
 	}
 
 
+
 	public void setPassword(String password) {
 		this.password = password;
 	}
 
 
-	public String getFirst_name() {
-		return first_name;
+
+	public String getFirstName() {
+		return firstName;
 	}
 
 
-	public void setFirst_name(String first_name) {
-		this.first_name = first_name;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
+
 
 
 	public String getCity() {
@@ -153,9 +166,11 @@ public class User {
 	}
 
 
+
 	public void setCity(String city) {
 		this.city = city;
 	}
+
 
 
 	public String getState() {
@@ -163,9 +178,11 @@ public class User {
 	}
 
 
+
 	public void setState(String state) {
 		this.state = state;
 	}
+
 
 
 	public String getCountry() {
@@ -173,19 +190,23 @@ public class User {
 	}
 
 
+
 	public void setCountry(String country) {
 		this.country = country;
 	}
 
 
-	public Date getDate_of_birth() {
-		return date_of_birth;
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
 	}
 
 
-	public void setDate_of_birth(Date date_of_birth) {
-		this.date_of_birth = date_of_birth;
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
+
 
 
 	public QuestionOne getQuestionOne() {
@@ -193,9 +214,11 @@ public class User {
 	}
 
 
+
 	public void setQuestionOne(QuestionOne questionOne) {
 		this.questionOne = questionOne;
 	}
+
 
 
 	public QuestionTwo getQuestionTwo() {
@@ -203,9 +226,11 @@ public class User {
 	}
 
 
+
 	public void setQuestionTwo(QuestionTwo questionTwo) {
 		this.questionTwo = questionTwo;
 	}
+
 
 
 	public QuestionThree getQuestionThree() {
@@ -213,10 +238,10 @@ public class User {
 	}
 
 
+
 	public void setQuestionThree(QuestionThree questionThree) {
 		this.questionThree = questionThree;
 	}
-	
 	
 	
 }
