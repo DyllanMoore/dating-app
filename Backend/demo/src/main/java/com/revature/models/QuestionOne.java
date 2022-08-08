@@ -27,5 +27,33 @@ public class QuestionOne {
 		// TODO Auto-generated constructor stub
 	}
 
+	public QuestionOne(int question_1_id, String answer) {
+		super();
+		this.question_1_id = question_1_id;
+		this.answer = answer;
+	}
+
+	public QuestionOne(String answer) {
+		super();
+		this.answer = answer;
+	}
+
+	public int getQuestion_1_id() {
+		return question_1_id;
+	}
+
+	public void setQuestion_1_id(int question_1_id) {
+		this.question_1_id = question_1_id;
+	}
+
+	public String getAnswer() {
+		return answer;
+	}
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+
+	
 	
 }

@@ -30,6 +30,45 @@ public class QuestionThree {
 	}
 
 
+	public QuestionThree(int question_3_id, String answer) {
+		super();
+		this.question_3_id = question_3_id;
+		this.answer = answer;
+	}
+
+
+	public QuestionThree(String answer) {
+		super();
+		this.answer = answer;
+	}
+
+
+	@Override
+	public String toString() {
+		return "QuestionThree [question_3_id=" + question_3_id + ", answer=" + answer + "]";
+	}
+
+
+	public int getQuestion_3_id() {
+		return question_3_id;
+	}
+
+
+	public void setQuestion_3_id(int question_3_id) {
+		this.question_3_id = question_3_id;
+	}
+
+
+	public String getAnswer() {
+		return answer;
+	}
+
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+
+	
 	
 	
 }
