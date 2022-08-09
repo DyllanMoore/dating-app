@@ -1,0 +1,16 @@
+package com.revature;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.revature.models.*;
+import com.revature.daos.*;
+
+@SpringBootApplication
+public class ProgrammersMingle {
+
+	public static void main(String[] args) {
+		SpringApplication.run(ProgrammersMingle.class, args);
+	}
+
+}

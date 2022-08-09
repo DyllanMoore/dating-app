@@ -1,0 +1,74 @@
+package com.revature.models;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+import javax.persistence.Table;
+
+import org.springframework.stereotype.Component;
+
+@Entity
+@Table(name="question3")
+@Component
+public class QuestionThree {
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int question3Id;
+	
+	@Column(nullable = false)
+	private String answer;
+
+	
+	//boilerplate
+	public QuestionThree() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
+	public QuestionThree(int question3Id, String answer) {
+		super();
+		this.question3Id = question3Id;
+		this.answer = answer;
+	}
+
+
+	public QuestionThree(String answer) {
+		super();
+		this.answer = answer;
+	}
+
+
+	@Override
+	public String toString() {
+		return "QuestionThree [question3Id=" + question3Id + ", answer=" + answer + "]";
+	}
+
+
+	public int getQuestion3Id() {
+		return question3Id;
+	}
+
+
+	public void setQuestion3Id(int question3Id) {
+		this.question3Id = question3Id;
+	}
+
+
+	public String getAnswer() {
+		return answer;
+	}
+
+
+	public void setAnswer(String answer) {
+		this.answer = answer;
+	}
+
+
+	
+	
+}
