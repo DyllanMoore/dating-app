@@ -7,10 +7,14 @@ plugins {
 group = 'com.revature'
 version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '8'
+targetCompatibility = '8'
 
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
+	}
+	cucumberRuntime {
+		extendsFrom testImplementation
 	}
 }
 
@@ -38,4 +42,15 @@ dependencies {
 
 tasks.named('test') {
 	useJUnitPlatform()
+}
+
+task cucumber() {
+    dependsOn assemble, testClasses
+    doLast {
+        javaexec {
+            main = "io.cucumber.core.cli.Main"
+            classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+            args = ['--plugin', 'pretty', '--glue', 'gradle.cucumber', 'src/test/resources']
+        }
+    }
 }
