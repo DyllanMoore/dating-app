@@ -1,1 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Variable colors, fonts, sizes */
+:root {
+    --green: #1f9143;
+    --blue: #3dcdf5;
+    --red: #f53d43;
+    --yellow: #ebba52;
+    --orange: #d9661a;
+    --black: #000000;
+    --white: #ffffff;
+    --primary-font: 'Inconsolata', monospace;
+    --large-font: 60px;
+    --med-font: 26px;
+    --small-font: 16px;
+    --xsmall-font: 12px;
+    --border-radius: 15px;
+    --shadow: 8px 5px 10px var(--black);
+}
+
+/* Divs */
+.login-container {
+    text-align: center;
+    border: 2px solid black;
+    width: 30vw;
+    margin: 30vh auto 0vh;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+/* Text */
+.login-header, 
+.login-different-color {
+    font-family: var(--primary-font);
+    color: var(--blue);
+    font-size: var(--large-font);
+    display: inline;
+}
+
+.login-different-color{
+    color: var(--black)
+}
+
+/* Inputs & Labels */
+.form-input {
+    font-family: var(--primary-font);
+    font-size: var(--med-font);
+}
+
+.form-label,
+.form-label-color {
+    font-family: var(--primary-font);
+    color: var(--blue);
+    display: inline;
+    font-size: var(--med-font);
+}
+
+.form-label-color {
+    color: var(--orange);
+}
+
+
+/* Buttons */
+.button{
+    display: inline;
+    color: var();
+    font-size: var(--med-font);
+    padding: 1% 3%;
+    font-family: var(--primary-font);
+}
+
+/* Links */
+.link {
+    color: var(--black);
+}
+
+.link-div{
+    margin-bottom: 2vh;;
+}
+
+.link:hover{
+    color: var(--green);
+}
+
+/* Margins */
+.no-margin{
+    margin: 0;
+}
+
+.small-margin{
+    margin: 3vh 0 0 0;
+}

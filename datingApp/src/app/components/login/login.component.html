@@ -1,26 +1,22 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="text-center">
-                    <h1>Login</h1>
-                    <h6>Please enter email and password!!</h6>
-                </div>
-                <form>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Login</button>
-                </form>
-                <br>
-                <a style="color: #fff;" routerLink="/signup">New User? Click to signup!</a>
-            </div>
+<div class="login-container">
+    <div class="login-header-div">
+        <h1 class="login-header no-margin">&lt;h1&gt;<p class="login-different-color">Login</p>&lt;/h1&gt;</h1>
+    </div>
+    <form>
+        <div class="login-div input-div small-margin">
+            <label for="usernameInput" class="form-label">&lt;input id=<p class="form-label-color">"username"</p>/&gt;</label>
+            <br>
+            <input type="text" class="form-input" id="usernameInput">
+            <br>
         </div>
+        <div class="login-div input-div small-margin">
+            <label for="passwordInput" class="form-label">&lt;input id=<p class="form-label-color">"password"</p>/&gt;</label>
+            <input type="password" class="form-input" id="passwordInput">
+        </div>
+        <button type="submit" class="button submit-button small-margin">Login</button>
+    </form>
+    <br>
+    <div class="link-div">
+    <a class="link" routerLink="/signup">New User? Click to signup!</a>
     </div>
 </div>
