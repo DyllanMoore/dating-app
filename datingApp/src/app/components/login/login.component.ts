@@ -9,33 +9,22 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  postId: any;
+  errorMessage: any;
 
-  public loginForm !: FormGroup
-  constructor(private formBuilder: FormBuilder, private http: HttpClient, private router: Router) { }
+  constructor(private http:HttpClient) { }
 
-  ngOnInit(): void {
-    this.loginForm = this.formBuilder.group({
-      username:[""],
-      password:[""]
-    })
-  }
-
-  login() {
-    this.http.get<any>("path")
-    .subscribe(res=>{
-      const user = res.find((a:any) =>{
-        return a.username === this.loginForm.value.username && a.password === this.loginForm.value.password
-      });
-      if (user) {
-        alert("Login succeed");
-        this.loginForm.reset();
-        this.router.navigate(['home'])
-      } else {
-        alert('user not found!!')
+  ngOnInit() {
+    this.http.post<any>('localhost:4444/data/users/login/', {title: 'User Login'}).subscribe({
+      next: data => {
+        this.postId = data.Id;
+      },
+      error: error => {
+        this.errorMessage = error.message;
+        console.error('Incorrect login!', error);
       }
-    }, err=>{
-      alert("Something went wrong")
     })
   }
+  
 
 }
