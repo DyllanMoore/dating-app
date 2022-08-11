@@ -19,7 +19,7 @@
 }
 
 /* Divs */
-.login-container {
+.center-container {
     text-align: center;
     border: 2px solid black;
     width: 30vw;
@@ -28,7 +28,12 @@
     box-shadow: var(--shadow);
 }
 
+.signup {
+    margin: 5vh auto 0vh;
+}
 /* Text */
+.signup-header,
+.signup-header-color,
 .login-header, 
 .login-different-color {
     font-family: var(--primary-font);
@@ -37,6 +42,7 @@
     display: inline;
 }
 
+.signup-header-color,
 .login-different-color{
     color: var(--black)
 }
@@ -69,6 +75,10 @@
     font-family: var(--primary-font);
 }
 
+.button:hover{
+    cursor: pointer;
+}
+
 /* Links */
 .link {
     color: var(--black);
@@ -80,6 +90,7 @@
 
 .link:hover{
     color: var(--green);
+    cursor: pointer;
 }
 
 /* Margins */

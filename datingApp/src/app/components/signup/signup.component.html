@@ -1,38 +1,44 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="card">
-                <div class="text-center">
-                    <h1>Sign Up</h1>
-                    <h6>Register Yourself!!</h6>
-                </div>
-                <form [formGroup]="signupForm" (ngSubmit)="signUp()">
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">First Name</label>
-                        <input formControlName="firstname" type="text" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Last Name</label>
-                        <input formControlName="lastname" type="text" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Username</label>
-                        <input formControlName="username" type="text" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Email address</label>
-                        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Password</label>
-                        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <button type="submit" class="btn btn-primary">Sign Up</button>
-                </form>
-                <br>
-                <a style="color: #fff;" routerLink="/login">Already have a account? Click to login!</a>
-            </div>
+<div class="center-container signup">
+    <div class="text-center">
+        <h1 class="signup-header no-margin">&lt;h1&gt;<p class="signup-header-color">Sign Up</p>&lt;/h1&gt;</h1>
+    </div>
+    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+        <div class="small-margin">
+            <label for="firstname" class="form-label">&lt;input id=<p class="form-label-color">"first_name"</p>/&gt;</label>
+            <br>
+            <input formControlName="firstname" type="text" class="form-input" id="firstname">
         </div>
+        <div class="small-margin">
+            <label for="username" class="form-label">&lt;input id=<p class="form-label-color">"username"</p>/&gt;</label>
+            <br>
+            <input formControlName="username" type="text" class="form-input" id="username">
+        </div>
+        <div class="small-margin">
+            <label for="password" class="form-label">&lt;input id=<p class="form-label-color">"password"</p>/&gt;</label>
+            <br>
+            <input formControlName="password" type="password" class="form-input" id="password">
+        </div>
+        <div class="small-margin">
+            <label for="passwordAuth" class="form-label">&lt;input id=<p class="form-label-color">"retype_password"</p>/&gt;</label>
+            <br>
+            <input formControlName="passwordAuth" type="password" class="form-input" id="passwordAuth">
+        </div>
+        <div class="small-margin">
+            <label for="birthdate" class="form-label">&lt;input id=<p class="form-label-color">"birthdate"</p>/&gt;</label>
+            <br>
+            <input formControlName="birthdate" type="date" class="form-input" id="birthdate">
+        </div>
+        <div class="small-margin">
+            <label for="location" class="form-label">&lt;input id=<p class="form-label-color">"location"</p>/&gt;</label>
+            <br>
+            <input formControlName="location" type="text" class="form-input" id="location">
+        </div>
+        <div class="small-margin">
+            <button type="submit" class="button">Sign Up</button>
+        </div>
+    </form>
+    <br>
+    <div class="link-div">
+        <a class="link" routerLink="/login">Already have a account? Click to login!</a>
     </div>
 </div>
