@@ -35,14 +35,19 @@ body{
 }
 
 .signup {
-    margin: 1vh auto;
+    margin: 1vh auto 0vh;
 }
 
 .navbar {
+    height: 5vh;
     padding: 0.1vh;
     position: sticky;
-    background-color: var(--black);
+    background: var(--dark-grey);
+    color: var(--white);
+    align-items: center;
+    font-family: var(--primary-font);
 }
+
 
 /* Text */
 .signup-header,
@@ -58,10 +63,6 @@ body{
 .signup-header-color,
 .login-different-color{
     color: var(--black)
-}
-
-.navbar {
-    font-family: var(--primary-font);
 }
 
 /* Inputs & Labels */

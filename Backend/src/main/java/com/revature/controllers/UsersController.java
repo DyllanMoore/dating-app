@@ -19,7 +19,7 @@ import com.revature.models.Users;
 
 @RestController
 @RequestMapping(value="/users")
-@CrossOrigin
+@CrossOrigin(origins = "http://localhost:4200")
 public class UsersController {
 	
 	private UsersDAO uDAO;
