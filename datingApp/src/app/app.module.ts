@@ -20,14 +20,15 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     AboutUsComponent,
     LoginComponent,
-    SignupComponent
+    SignupComponent,
+    
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

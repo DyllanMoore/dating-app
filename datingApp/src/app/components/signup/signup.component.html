@@ -1,44 +1,117 @@
 <div class="center-container signup">
-    <div class="text-center">
-        <h1 class="signup-header no-margin">&lt;h1&gt;<p class="signup-header-color">Sign Up</p>&lt;/h1&gt;</h1>
+    <div class="signup-header-div">
+        <h1 class="signup-header no-margin">&lt;h1&gt;<p class="signup-header-color">Signup</p>&lt;/h1&gt;</h1>
     </div>
-    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
-        <div class="small-margin">
-            <label for="firstname" class="form-label">&lt;input id=<p class="form-label-color">"first_name"</p>/&gt;</label>
+    <div class="signup-div">
+      <form
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+        <div class="form-input">
+            <label for="firstname" class="form-label">&lt;input id=<p class="form-label-color">"username"</p>/&gt;</label>
             <br>
-            <input formControlName="firstname" type="text" class="form-input" id="firstname">
+          <input
+            type="text"
+            class="form-input"
+            name="username"
+            [(ngModel)]="form.username"
+            required
+            #username="ngModel"
+          />
         </div>
-        <div class="small-margin">
-            <label for="username" class="form-label">&lt;input id=<p class="form-label-color">"username"</p>/&gt;</label>
-            <br>
-            <input formControlName="username" type="text" class="form-input" id="username">
-        </div>
-        <div class="small-margin">
+        <div class="form-input">
             <label for="password" class="form-label">&lt;input id=<p class="form-label-color">"password"</p>/&gt;</label>
             <br>
-            <input formControlName="password" type="password" class="form-input" id="password">
+          <input
+            type="password"
+            class="form-input"
+            name="password"
+            [(ngModel)]="form.password"
+            required
+            #password="ngModel"
+          />
         </div>
-        <div class="small-margin">
+        <div class="form-input">
             <label for="passwordAuth" class="form-label">&lt;input id=<p class="form-label-color">"retype_password"</p>/&gt;</label>
             <br>
-            <input formControlName="passwordAuth" type="password" class="form-input" id="passwordAuth">
+          <input
+            type="password"
+            class="form-input"
+            name="passwordAuth"
+            [(ngModel)]="form.passwordAuth"
+            required
+            #passwordAuth="ngModel"
+          />
         </div>
-        <div class="small-margin">
+        <div class="form-input">
+            <label for="first_name" class="form-label">&lt;input id=<p class="form-label-color">"first_name"</p>/&gt;</label>
+            <br>
+          <input
+            type="text"
+            class="form-inout"
+            name="first_name"
+            [(ngModel)]="form.first_name"
+            required
+            #first_name="ngModel"
+          />
+        </div>
+        <div class="form-input">
             <label for="birthdate" class="form-label">&lt;input id=<p class="form-label-color">"birthdate"</p>/&gt;</label>
             <br>
-            <input formControlName="birthdate" type="date" class="form-input" id="birthdate">
+          <input
+            type="date"
+            class="form-input"
+            name="date_of_birth"
+            [(ngModel)]="form.date_of_birth"
+            required
+            #date_of_birth="ngModel"
+          />
         </div>
-        <div class="small-margin">
-            <label for="location" class="form-label">&lt;input id=<p class="form-label-color">"location"</p>/&gt;</label>
+        <div class="form-input">
+            <label for="city" class="form-label">&lt;input id=<p class="form-label-color">"city"</p>/&gt;</label>
             <br>
-            <input formControlName="location" type="text" class="form-input" id="location">
+          <input
+            type="text"
+            class="form-input"
+            name="city"
+            [(ngModel)]="form.city"
+            required
+            #city="ngModel"
+          />
         </div>
-        <div class="small-margin">
-            <button type="submit" class="button">Sign Up</button>
+        <div class="form-input">
+            <label for="state" class="form-label">&lt;input id=<p class="form-label-color">"state"</p>/&gt;</label>
+            <br>
+          <input
+            type="text"
+            class="form-input"
+            name="state"
+            [(ngModel)]="form.state"
+            required
+            #state="ngModel"
+          />
         </div>
-    </form>
-    <br>
-    <div class="link-div">
+        <div class="form-input">
+            <label for="country" class="form-label">&lt;input id=<p class="form-label-color">"country"</p>/&gt;</label>
+            <br>
+          <input
+            type="text"
+            class="form-input"
+            name="country"
+            [(ngModel)]="form.country"
+            required
+            #country="ngModel"
+          />
+        </div>
+        <div class="form-group small-margin">
+          <button type="submit" class="button submit-button small-margin">Sign Up</button>
+        </div>
+      </form>
+      <div class="link-div">
         <a class="link" routerLink="/login">Already have an account? Click to login!</a>
     </div>
-</div>
+    </div>
+  </div>
