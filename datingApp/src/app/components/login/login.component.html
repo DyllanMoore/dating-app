@@ -1,29 +1,4 @@
-<!-- <div class="center-container login">
-    <div class="login-header-div">
-        <h1 class="login-header no-margin">&lt;h1&gt;<p class="login-different-color">Login</p>&lt;/h1&gt;</h1>
-    </div>
-    <form>
-        <div class="login-div input-div small-margin">
-            <label for="usernameInput" class="form-label">&lt;input id=<p class="form-label-color">"username"</p>/&gt;</label>
-            <br>
-            <input type="text" class="form-input" id="usernameInput">
-            <br>
-        </div>
-        <div class="login-div input-div small-margin">
-            <label for="passwordInput" class="form-label">&lt;input id=<p class="form-label-color">"password"</p>/&gt;</label>
-            <input type="password" class="form-input" id="passwordInput">
-        </div>
-        <button type="submit" class="button submit-button small-margin">Login</button>
-    </form>
-    <br>
-    <div class="card-body">
-        Error message: {{errorMessage}}
-    </div>
-    <div class="link-div">
-    <a class="link" routerLink="/signup">New User? Click to signup!</a>
-    </div>
-</div> -->
-<div class="col-md-12">
+<div class="center-container">
       <form
         *ngIf="!isLoggedIn"
         name="form"
@@ -31,11 +6,14 @@
         #f="ngForm"
         novalidate
       >
-        <div class="form-group">
-          <label for="username">Username</label>
+      <div class="login-header-div">
+        <h1 class="login-header no-margin">&lt;h1&gt;<p class="login-different-color">Login</p>&lt;/h1&gt;</h1>
+    </div>
+        <div class="login-div input-div small-margin">
+          <label for="username" class="form-label">&lt;input id=<p class="form-label-color">"username"</p>/&gt;</label>
           <input
             type="text"
-            class="form-control"
+            class="form-input"
             name="username"
             [(ngModel)]="form.username"
             required
@@ -49,11 +27,11 @@
             Username is required!
           </div>
         </div>
-        <div class="form-group">
-          <label for="password">Password</label>
+        <div class="login-div input-div small-margin">
+          <label for="password" class="form-label">&lt;input id=<p class="form-label-color">"password"</p>/&gt;</label>
           <input
             type="password"
-            class="form-control"
+            class="form-input"
             name="password"
             [(ngModel)]="form.password"
             required
@@ -66,9 +44,7 @@
           >
         </div>
         <div class="form-group">
-          <button class="btn btn-primary btn-block">
-            Login
-          </button>
+            <button type="submit" class="button submit-button small-margin">Login</button>
         </div>
         <div class="form-group">
           <div
@@ -82,4 +58,7 @@
       <div class="alert alert-success" *ngIf="isLoggedIn">
         Logged in as {{ roles }}.
       </div>
+      <div class="link-div">
+        <a class="link" routerLink="/signup">New User? Click to signup!</a>
+        </div>
     </div>
