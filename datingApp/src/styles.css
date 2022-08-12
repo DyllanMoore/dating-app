@@ -122,9 +122,9 @@ body{
     margin: 3vh 0 0 0;
 }
 
-/* Background Image
+/* Background Image */
 .background-image{
     width: 100%;
 }
-html, body { height: 100%; }
+/* html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; } */
