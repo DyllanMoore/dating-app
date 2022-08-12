@@ -1,19 +1,18 @@
-<div *ngIf="(user$ | async) as user" class="main-div">
-    <mat-card class="card">
-        <mat-card-header>
-            <div mat-card-avatar>
+<div *ngIf="currentUser" class="main-div">
+    <div class="card">
+        <div>
+            <div>
                 <!-- <img src="{{origin}}/api/users/profile-image/{{user.profileImage}}" class="header-image"> -->
             </div>
-            <mat-card-title>{{user.name}}</mat-card-title>
-            <mat-card-subtitle>{{user.email}}</mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-            <p>Username: {{user.username}}</p>
-            <p>First Name: {{user.first_name}}</p>
-            <h2>City: {{user.city}}</h2>
-            <h2>State: {{user.state}}</h2>
-            <h2>Country: {{user.country}}</h2>
-            <h2>DOB: {{user.date_of_birth}}</h2>
-        </mat-card-content>
-    </mat-card>
+            <h2>{{currentUser.username}}</h2>
+        </div>
+        <ul>
+            <li>Username: {{currentUser.username}}</li>
+            <li>First Name: {{currentUser.first_name}}</li>
+            <li>City: {{currentUser.city}}</li>
+            <li>State: {{currentUser.state}}</li>
+            <li>Country: {{currentUser.country}}</li>
+            <li>DOB: {{currentUser.date_of_birth}}</li>
+        </ul>
+    </div>
 </div>
