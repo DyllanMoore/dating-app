@@ -9,6 +9,7 @@ import { Q2 } from './components/q2/q2.components';
 import { Q3 } from './components/q3/q3.component';
 import { MingleComponent } from './components/mingle/mingle.component';
 import { MatchesComponent } from './components/matches/matches.component';
+import { UpdateComponent } from './components/update/update.component';
 const routes: Routes = [
 
   {
@@ -54,6 +55,11 @@ const routes: Routes = [
   {
     path: 'matches',
     component: MatchesComponent
+  },
+
+  {
+    path: 'update',
+    component: UpdateComponent
   }
 ];
 
