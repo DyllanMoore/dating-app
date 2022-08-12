@@ -1,18 +1,22 @@
-<div *ngIf="currentUser" class="main-div">
+<div *ngIf="currentUser" class="center-container profile-container">
     <div class="card">
         <div>
-            <div>
+            <div class="image-div">
+                <img class="placeholder-image" src="https://allthatsinteresting.com/wordpress/wp-content/uploads/2020/03/quokka-leaf-smile.jpg" alt="quokka">
                 <!-- <img src="{{origin}}/api/users/profile-image/{{user.profileImage}}" class="header-image"> -->
-            </div>
-            <h2>{{currentUser.username}}</h2>
+            </div>   
         </div>
-        <ul>
-            <li>Username: {{currentUser.username}}</li>
-            <li>First Name: {{currentUser.first_name}}</li>
-            <li>City: {{currentUser.city}}</li>
-            <li>State: {{currentUser.state}}</li>
-            <li>Country: {{currentUser.country}}</li>
-            <li>DOB: {{currentUser.date_of_birth}}</li>
-        </ul>
+        <div class="profile-div">
+            <h2 class="profile-header">{{currentUser.username}}</h2>
+            <ul>
+                <li class="text">Username: {{currentUser.username}}</li> 
+                <li class="text">First Name: {{currentUser.first_name}}</li>
+                <li class="text">City: {{currentUser.city}}</li>
+                <li class="text">State: {{currentUser.state}}</li>
+                <li class="text">Country: {{currentUser.country}}</li>
+                <li class="text">DOB: {{currentUser.date_of_birth}}</li>
+            </ul>    
+        </div>
+        <button class="small-button">Edit Profile</button>
     </div>
 </div>

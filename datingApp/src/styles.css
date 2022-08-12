@@ -34,6 +34,11 @@ body{
     background-color: var(--white);
 }
 
+.setup {
+    width: 40vw;
+    margin: 20vh auto 0vh;
+}
+
 .signup {
     margin: 1vh auto 0vh;
 }
@@ -48,8 +53,33 @@ body{
     font-family: var(--primary-font);
 }
 
+.profile-container{
+    width: 50vw;
+    margin: 5vh auto 0;
+}
 
+.image-div{
+    display: block;
+    text-align: right;
+    height: 80vh;
+    width: auto;
+}
+
+.placeholder-image{
+    height: 70vh;
+    width: auto;
+    margin:5vh 2vw 0vh;
+}
+
+.profile-div{
+    position: absolute;
+    margin-top: 20vh;
+    margin-left: 5vw;
+    text-align: left;
+}
 /* Text */
+.setup-header,
+.setup-header-color,
 .signup-header,
 .signup-header-color,
 .login-header, 
@@ -60,11 +90,27 @@ body{
     display: inline;
 }
 
+.setup-header-color,
 .signup-header-color,
 .login-different-color{
     color: var(--black)
 }
 
+.setup-div{
+    padding: 2vh 0vw;
+}
+
+.profile-header{
+    font-family: var(--primary-font);
+    font-size: var(--large-font);
+}
+
+.text{
+    list-style: none;
+    font-family: var(--primary-font);
+    font-size: var(--med-font);
+    margin-left: -2vw;
+}
 /* Inputs & Labels */
 .form-input {
     font-family: var(--primary-font);
@@ -85,6 +131,7 @@ body{
 
 
 /* Buttons */
+.small-button,
 .button{
     display: inline;
     color: var();
@@ -93,12 +140,17 @@ body{
     font-family: var(--primary-font);
     border-radius: var(--border-radius);
 }
-
+.small-button:hover,
 .button:hover{
     cursor: pointer;
     background-color: var(--grey);
 }
 
+.small-button{
+    font-size: var(--small-font);
+    width:20vw;
+    margin-left: 30%;
+}
 /* Links */
 .link {
     color: var(--black);
