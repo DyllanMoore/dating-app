@@ -1,0 +1,18 @@
+<div *ngIf="currentUser" class="main-div">
+    <div class="card">
+        <div>
+            <div>
+                <!-- <img src="{{origin}}/api/users/profile-image/{{user.profileImage}}" class="header-image"> -->
+            </div>
+            <h2>{{currentUser.username}}</h2>
+        </div>
+        <ul>
+            <li>Username: {{currentUser.username}}</li>
+            <li>First Name: {{currentUser.first_name}}</li>
+            <li>City: {{currentUser.city}}</li>
+            <li>State: {{currentUser.state}}</li>
+            <li>Country: {{currentUser.country}}</li>
+            <li>DOB: {{currentUser.date_of_birth}}</li>
+        </ul>
+    </div>
+</div>
