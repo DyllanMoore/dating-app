@@ -72,9 +72,9 @@ body{
 }
 
 .profile-div{
+    width: 35%;
     position: absolute;
-    margin-top: 20vh;
-    margin-left: 5vw;
+    margin-top: 10vh;
     text-align: left;
 }
 /* Text */
@@ -103,13 +103,13 @@ body{
 .profile-header{
     font-family: var(--primary-font);
     font-size: var(--large-font);
+    text-align: center;
 }
 
 .text{
     list-style: none;
     font-family: var(--primary-font);
     font-size: var(--med-font);
-    margin-left: -2vw;
 }
 /* Inputs & Labels */
 .form-input {
@@ -150,6 +150,31 @@ body{
     font-size: var(--small-font);
     width:20vw;
     margin-left: 30%;
+}
+
+.left-button,
+.right-button{
+    width: 15%;
+    font-size: var(--med-font);
+}
+
+.right-button{
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: -62px;
+}
+
+.right-button:hover{
+    background-color: var(--green);
+}
+
+.left-button{
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.left-button:hover{
+    background-color: var(--red);
 }
 /* Links */
 .link {

@@ -7,6 +7,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { Q1 } from './components/q1/q1.component';
 import { Q2 } from './components/q2/q2.components';
 import { Q3 } from './components/q3/q3.component';
+import { MingleComponent } from './components/mingle/mingle.component';
+import { MatchesComponent } from './components/matches/matches.component';
 const routes: Routes = [
 
   {
@@ -44,6 +46,15 @@ const routes: Routes = [
     component: Q3
   },
 
+  {
+    path: 'mingle',
+    component: MingleComponent
+  },
+
+  {
+    path: 'matches',
+    component: MatchesComponent
+  }
 ];
 
 @NgModule({
