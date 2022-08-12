@@ -8,7 +8,7 @@ import { SignupComponent } from './components/signup/signup.component';
 const routes: Routes = [
 
   {
-    path:'/',
+    path:'',
     component: HomeComponent
   },
 
