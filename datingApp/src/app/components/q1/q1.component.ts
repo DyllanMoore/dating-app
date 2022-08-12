@@ -1,16 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 @Component({
-  selector: 'app-setup',
-  templateUrl: './setup.component.html',
-  styleUrls: ['./setup.component.css']
+  selector: 'app-q1',
+  templateUrl: './q1.component.html',
+  styleUrls: ['./q1.component.css']
 })
-export class SetupComponent implements OnInit {
+export class Q1 implements OnInit {
   form: any = {
-    question_1_fk: null,
-    question_2_fk: null,
-    question_3_fk: null,
-    image: null
+    question_1_id: null,
   };
   isSuccessful = false;
   isSignUpFailed = false;
@@ -19,8 +16,8 @@ export class SetupComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(): void {
-    const { question_1_fk, question_2_fk, question_3_fk, image } = this.form;
-    this.authService.setup(question_1_fk, question_2_fk, question_3_fk, image).subscribe(
+    const { question_1_id} = this.form;
+    this.authService.q1(question_1_id).subscribe(
       data => {
         console.log(data);
         this.isSuccessful = true;

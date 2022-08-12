@@ -1,0 +1,35 @@
+<div class="center-container setup">
+    <div class="setup-header-div">
+        <h1 class="setup-header no-margin">&lt;h1&gt;<p class="setup-header-color">Profile Setup</p>&lt;/h1&gt;</h1>
+    </div>
+    <div class="setup-div">
+      <form
+        *ngIf="!isSuccessful"
+        name="form"
+        (ngSubmit)="f.form.valid && onSubmit()"
+        #f="ngForm"
+        novalidate
+      >
+      <div class="form-input">
+        <label for="question3" class="form-label">&lt;input id=<p class="form-label-color">"question_3"</p>/&gt;</label>
+        <p>How do you pronounce SQL?</p>
+        <br>
+      <select
+        class="form-input"
+        name="sql"
+        [(ngModel)]="form.question_3_id"
+        required
+        #question_3_id="ngModel">
+        <option for="sql" value="1">ESS-QUE-ELL</option>
+        <option for="sql" value="2">Sequel</option>
+        <option for="sql" value="3">Squeal</option>
+        <option for="sql" value="4">Squirrel</option>
+        <option for="sql" value="5">Squell</option>
+        </select>
+    </div>
+    <div class="form-group small-margin">
+        <button type="submit" class="button submit-button small-margin">Submit</button>
+      </div>
+    </form>
+  </div>
+</div>

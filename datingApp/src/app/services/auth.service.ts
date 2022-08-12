@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+
 const AUTH_API = 'http://localhost:4444/data/users';
 const httpOptions = {
   headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -31,13 +32,22 @@ export class AuthService {
     }, httpOptions);
   }
 
-  setup(question_1_fk: Number, question_2_fk: Number, question_3_fk: Number, image: string ): Observable<any> {
-    return this.http.post(AUTH_API, { 
-      question_1_fk,
-      question_2_fk,
-      question_3_fk,
-      image
+  q1(question_1_id: Number): Observable<any> {
+    return this.http.post(AUTH_API + '/question1', { 
+      question_1_id
     }, httpOptions);
   }
-  
-}
+
+  q2(question_2_id: Number): Observable<any> {
+    return this.http.post(AUTH_API + '/question2', { 
+      question_2_id
+    }, httpOptions);
+  }
+
+  q3(question_3_id: Number): Observable<any> {
+    return this.http.post(AUTH_API + '/question3', { 
+      question_3_id
+    }, httpOptions);
+  }
+
+} 

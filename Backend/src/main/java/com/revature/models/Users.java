@@ -29,23 +29,23 @@ public class Users {
 	@Column
 	private String username;
 	
-	@Column(nullable = false)
+	@Column
 	private String password;
 	
-	@Column(nullable = false)
+	@Column
 	private String first_name;
 	
-	@Column(nullable = false)
+	@Column
 	private String city;
 	
-	@Column(nullable = false)
+	@Column
 	private String state;
 	
-	@Column(nullable = false)
+	@Column
 	private String country;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(nullable = false)
+	@Column
 	private Date date_of_birth;
 	
 	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)

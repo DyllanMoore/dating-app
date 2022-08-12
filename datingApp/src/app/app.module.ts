@@ -12,7 +12,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SetupComponent } from './components/setup/setup.component';
+import { Q1 } from './components/q1/q1.component';
+import { Q2 } from './components/q2/q2.components';
+import { Q3 } from './components/q3/q3.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { SetupComponent } from './components/setup/setup.component';
     LoginComponent,
     SignupComponent,
     ProfileComponent,
-    SetupComponent
+    Q1,
+    Q2,
+    Q3
   ],
   imports: [
     BrowserModule,
