@@ -30,4 +30,14 @@ export class AuthService {
       question_3_fk: 1
     }, httpOptions);
   }
+
+  setup(question_1_fk: Number, question_2_fk: Number, question_3_fk: Number, image: string ): Observable<any> {
+    return this.http.post(AUTH_API, { 
+      question_1_fk,
+      question_2_fk,
+      question_3_fk,
+      image
+    }, httpOptions);
+  }
+  
 }

@@ -1,5 +1,6 @@
 package com.revature.DAOs;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -13,6 +14,5 @@ public interface UsersDAO extends JpaRepository<Users, Integer>{
 	public Optional<Users> findByUsernameAndPassword(String username, String password);
 
 	public Optional<Users> findByUsername(String username);
-	
-	
+		
 }
