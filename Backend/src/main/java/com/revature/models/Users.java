@@ -60,8 +60,8 @@ public class Users {
 	@JoinColumn(name = "question_3_id")
 	private QuestionThree questionThree;
 	
-	@Column
-	private String images;
+	@Column(length = 1000)
+	private byte[] pfp;
 	
 	
 //	Boilerplate
@@ -73,7 +73,7 @@ public class Users {
 
 public Users(int user_id, String username, String password, String first_name, String city, String state,
 		String country, Date date_of_birth, QuestionOne questionOne, QuestionTwo questionTwo,
-		QuestionThree questionThree, String images) {
+		QuestionThree questionThree, byte[] pfp) {
 	super();
 	this.user_id = user_id;
 	this.username = username;
@@ -86,13 +86,13 @@ public Users(int user_id, String username, String password, String first_name, S
 	this.questionOne = questionOne;
 	this.questionTwo = questionTwo;
 	this.questionThree = questionThree;
-	this.images = images;
+	this.pfp = pfp;
 }
 
 
 public Users(String username, String password, String first_name, String city, String state, String country,
 		Date date_of_birth, QuestionOne questionOne, QuestionTwo questionTwo, QuestionThree questionThree,
-		String images) {
+		byte[] pfp) {
 	super();
 	this.username = username;
 	this.password = password;
@@ -104,7 +104,7 @@ public Users(String username, String password, String first_name, String city, S
 	this.questionOne = questionOne;
 	this.questionTwo = questionTwo;
 	this.questionThree = questionThree;
-	this.images = images;
+	this.pfp = pfp;
 }
 
 
@@ -113,7 +113,7 @@ public String toString() {
 	return "Users [user_id=" + user_id + ", username=" + username + ", password=" + password + ", first_name="
 			+ first_name + ", city=" + city + ", state=" + state + ", country=" + country + ", date_of_birth="
 			+ date_of_birth + ", questionOne=" + questionOne + ", questionTwo=" + questionTwo + ", questionThree="
-			+ questionThree + ", images=" + images + "]";
+			+ questionThree + ", pfp=" + pfp + "]";
 }
 
 
@@ -227,13 +227,13 @@ public void setQuestionThree(QuestionThree questionThree) {
 }
 
 
-public String getImages() {
-	return images;
+public byte[] getpfp() {
+	return pfp;
 }
 
 
-public void setImages(String images) {
-	this.images = images;
+public void setpfp(byte[] pfp) {
+	this.pfp = pfp;
 }
 
 	
