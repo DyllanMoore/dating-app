@@ -12,9 +12,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { Q1 } from './components/q1/q1.component';
-import { Q2 } from './components/q2/q2.components';
-import { Q3 } from './components/q3/q3.component';
 import { MingleComponent } from './components/mingle/mingle.component';
 
 @NgModule({
@@ -27,9 +24,6 @@ import { MingleComponent } from './components/mingle/mingle.component';
     LoginComponent,
     SignupComponent,
     ProfileComponent,
-    Q1,
-    Q2,
-    Q3,
     MingleComponent
   ],
   imports: [

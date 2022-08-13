@@ -106,6 +106,57 @@
             #country="ngModel"
           />
         </div>
+        <div class="form-input">
+          <label for="question1" class="form-label">&lt;input id=<p class="form-label-color">"question_1"</p>/&gt;</label>
+          <p>What is your favorite coding language?</p>
+          <br>
+        <select
+          class="form-input"
+          name="language"
+          [(ngModel)]="form.question_1_id"
+          required
+          #question_1_id="ngModel">
+          <option for="language" value="1">Java</option>
+          <option for="language" value="2">TypeScript</option>
+          <option for="language" value="3">Python</option>
+          <option for="language" value="4">HTML/CSS</option>
+          <option for="language" value="5">Scala</option>
+          </select>
+      </div>
+      <div class="form-input">
+        <label for="question2" class="form-label">&lt;input id=<p class="form-label-color">"question_2"</p>/&gt;</label>
+        <p>What do you prefer to do?</p>
+        <br>
+      <select
+        class="form-input"
+        name="preference"
+        [(ngModel)]="form.question_2_id"
+        required
+        #question_2_id="ngModel">
+        <option for="preference" value="1">Frontend</option>
+        <option for="preference" value="2">Backend</option>
+        <option for="preference" value="3">Fullstack</option>
+        <option for="preference" value="4">Cyber Security</option>
+        <option for="preference" value="5">Blockchain/Web3</option>
+        </select>
+    </div>
+    <div class="form-input">
+      <label for="question3" class="form-label">&lt;input id=<p class="form-label-color">"question_3"</p>/&gt;</label>
+      <p>How do you pronounce SQL?</p>
+      <br>
+    <select
+      class="form-input"
+      name="sql"
+      [(ngModel)]="form.question_3_id"
+      required
+      #question_3_id="ngModel">
+      <option for="sql" value="1">ESS-QUE-ELL</option>
+      <option for="sql" value="2">Sequel</option>
+      <option for="sql" value="3">Squeal</option>
+      <option for="sql" value="4">Squirrel</option>
+      <option for="sql" value="5">Squell</option>
+      </select>
+  </div>
         <div class="form-group small-margin">
           <button type="submit" class="button submit-button small-margin">Sign Up</button>
         </div>

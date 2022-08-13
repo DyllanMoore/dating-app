@@ -17,7 +17,7 @@ export class AuthService {
       password
     }, httpOptions);
   }
-  signup(username: string, password: string, first_name: string, city: string, state: string, country: string, date_of_birth: Date): Observable<any> {
+  signup(username: string, password: string, first_name: string, city: string, state: string, country: string, date_of_birth: Date, question_1_id: Number, question_2_id:Number, question_3_id: Number): Observable<any> {
     return this.http.post(AUTH_API, {
       username,
       password,
@@ -26,28 +26,9 @@ export class AuthService {
       state,
       country,
       date_of_birth, 
-      question_1_fk: 1,
-      question_2_fk: 1,
-      question_3_fk: 1
-    }, httpOptions);
-  }
-
-  q1(question_1_id: Number): Observable<any> {
-    return this.http.post(AUTH_API + '/question1', { 
-      question_1_id
-    }, httpOptions);
-  }
-
-  q2(question_2_id: Number): Observable<any> {
-    return this.http.post(AUTH_API + '/question2', { 
-      question_2_id
-    }, httpOptions);
-  }
-
-  q3(question_3_id: Number): Observable<any> {
-    return this.http.post(AUTH_API + '/question3', { 
+      question_1_id,
+      question_2_id,
       question_3_id
     }, httpOptions);
   }
-
 } 
