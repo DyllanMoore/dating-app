@@ -22,8 +22,8 @@ export class UpdateComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(): void {
-    const { username, password, first_name, city, state, country, date_of_birth } = this.form;
-    this.authService.signup(username, password, first_name, city, state, country, date_of_birth).subscribe(
+    const { username, password, first_name, city, state, country, date_of_birth, question_1_id, question_2_id, question_3_id } = this.form;
+    this.authService.signup(username, password, first_name, city, state, country, date_of_birth, question_1_id, question_2_id, question_3_id ).subscribe(
       data => {
         console.log(data);
         this.isSuccessful = true;

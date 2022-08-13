@@ -2,7 +2,7 @@
     <div class="signup-header-div">
         <h1 class="signup-header no-margin">&lt;h1&gt;<p class="signup-header-color">Signup</p>&lt;/h1&gt;</h1>
     </div>
-    <div class="signup-div">
+    <div class="signup-div small-margin">
       <form
         *ngIf="!isSuccessful"
         name="form"
@@ -22,6 +22,7 @@
             #username="ngModel"
           />
         </div>
+        <br>
         <div class="form-input">
             <label for="password" class="form-label">&lt;input id=<p class="form-label-color">"password"</p>/&gt;</label>
             <br>
@@ -34,6 +35,7 @@
             #password="ngModel"
           />
         </div>
+        <br>
         <div class="form-input">
             <label for="passwordAuth" class="form-label">&lt;input id=<p class="form-label-color">"retype_password"</p>/&gt;</label>
             <br>
@@ -46,6 +48,7 @@
             #passwordAuth="ngModel"
           />
         </div>
+        <br>
         <div class="form-input">
             <label for="first_name" class="form-label">&lt;input id=<p class="form-label-color">"first_name"</p>/&gt;</label>
             <br>
@@ -58,6 +61,7 @@
             #first_name="ngModel"
           />
         </div>
+        <br>
         <div class="form-input">
             <label for="birthdate" class="form-label">&lt;input id=<p class="form-label-color">"birthdate"</p>/&gt;</label>
             <br>
@@ -70,6 +74,7 @@
             #date_of_birth="ngModel"
           />
         </div>
+        <br>
         <div class="form-input">
             <label for="city" class="form-label">&lt;input id=<p class="form-label-color">"city"</p>/&gt;</label>
             <br>
@@ -82,6 +87,7 @@
             #city="ngModel"
           />
         </div>
+        <br>
         <div class="form-input">
             <label for="state" class="form-label">&lt;input id=<p class="form-label-color">"state"</p>/&gt;</label>
             <br>
@@ -94,6 +100,7 @@
             #state="ngModel"
           />
         </div>
+        <br>
         <div class="form-input">
             <label for="country" class="form-label">&lt;input id=<p class="form-label-color">"country"</p>/&gt;</label>
             <br>
@@ -106,10 +113,10 @@
             #country="ngModel"
           />
         </div>
+        <br>
         <div class="form-input">
           <label for="question1" class="form-label">&lt;input id=<p class="form-label-color">"question_1"</p>/&gt;</label>
           <p>What is your favorite coding language?</p>
-          <br>
         <select
           class="form-input"
           name="language"
@@ -123,10 +130,10 @@
           <option for="language" value="5">Scala</option>
           </select>
       </div>
+      <br>
       <div class="form-input">
         <label for="question2" class="form-label">&lt;input id=<p class="form-label-color">"question_2"</p>/&gt;</label>
         <p>What do you prefer to do?</p>
-        <br>
       <select
         class="form-input"
         name="preference"
@@ -140,10 +147,10 @@
         <option for="preference" value="5">Blockchain/Web3</option>
         </select>
     </div>
+    <br>
     <div class="form-input">
       <label for="question3" class="form-label">&lt;input id=<p class="form-label-color">"question_3"</p>/&gt;</label>
       <p>How do you pronounce SQL?</p>
-      <br>
     <select
       class="form-input"
       name="sql"
@@ -157,6 +164,7 @@
       <option for="sql" value="5">Squell</option>
       </select>
   </div>
+  <br>
         <div class="form-group small-margin">
           <button type="submit" class="button submit-button small-margin">Sign Up</button>
         </div>
