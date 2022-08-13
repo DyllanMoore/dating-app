@@ -15,5 +15,5 @@ public interface UsersDAO extends JpaRepository<Users, Integer>{
 
 	public Optional<Users> findByUsername(String username);
 	
-		
+	public Optional<Users> findByState(String state);
 }

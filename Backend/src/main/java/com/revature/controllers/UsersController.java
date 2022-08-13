@@ -60,6 +60,21 @@ public class UsersController {
 		return ResponseEntity.status(400).build();
 	}
 	
+	//GetByState endpoint will be /data/users/{state}
+	@GetMapping("/{state}")
+	public ResponseEntity<Users> getByState(@PathVariable("state") String state){
+		Optional<Users> optionalUsers = uDAO.findByState(state);
+		
+		Users user;
+		
+		if(optionalUsers.isPresent()) {
+			user = optionalUsers.get();
+			return ResponseEntity.ok().body(user);
+		}
+		
+		return ResponseEntity.status(400).build();
+	}
+	
 	//New user endpoint will be /data/users
 	@PostMapping
 	public ResponseEntity addUser(@RequestBody Users user) {

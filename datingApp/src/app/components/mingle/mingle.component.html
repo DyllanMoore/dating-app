@@ -7,16 +7,12 @@
             </div>   
         </div>
         <div class="profile-div">
-            <h2 class="profile-header">Other PM User</h2>
-            <ul>
-                <li class="text">Favorite Programming Language is: JavaScript.</li> 
-                <br>
-                <li class="text">Pronounces SQL: squeal</li>
-                <br>
-                <li class="text">Is interested in: Blockchain/Web3</li>
+            <ul *ngFor="let users of users">
+                <li class="text">Name: {{users[1].first_name}}</li> 
+                <li class="text">Location: {{users[1].state}}</li>
             </ul>    
         </div>
-        <button class="right-button button">Like</button>
+        <button onClick=onLike() class="right-button button">Like</button>
         <button class="left-button button">Nope</button>
     </div>
 </div>
