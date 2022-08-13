@@ -86,17 +86,4 @@ public class UsersController {
 		return ResponseEntity.badRequest().build();
 	}
 	
-	 @PostMapping("/question1")
-	 public ResponseEntity updateUserQuestion1(@RequestBody Users user) {
-		 Optional<Users> optionalUsers = uDAO.findByUsername(user.getUsername());
-		 
-		 Users u;
-		 if(optionalUsers.isPresent()) {
-			 u = optionalUsers.get();
-			 user.setQuestionOne(u.getQuestionOne());
-			 Users newUser = uDAO.save(user);
-			 return ResponseEntity.accepted().body(newUser);
-		 }
-		 return ResponseEntity.badRequest().build();
-	 }
 }
