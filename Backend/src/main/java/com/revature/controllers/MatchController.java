@@ -40,6 +40,18 @@ public class MatchController {
 		
 		return ResponseEntity.accepted().body(newMatch);
 	}
+	
+	@GetMapping("/likedby/{id}")
+	public ResponseEntity<List<Match>> getLikedBy(@PathVariable("id") int id) {
+		List<Match> matchList = mService.getLikedBy(id);
+		return ResponseEntity.ok(matchList);
+	}
+	
+	@GetMapping("/liked/{id}")
+	public ResponseEntity<List<Match>> getLiked(@PathVariable("id") int id) {
+		List<Match> matchList = mService.getLiked(id);
+		return ResponseEntity.ok(matchList);
+	}
 
 	
 	

@@ -1,5 +1,6 @@
 package com.revature.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -57,6 +58,18 @@ public class MatchService {
 			return mDAO.save(newMatch);
 			
 		}
+	}
+
+	public List<Match> getLikedBy(int id) {
+		Optional<List<Match>> optionalMatchList = mDAO.findByUser1(id);
+		List<Match> matchList = optionalMatchList.get();
+		return matchList;
+	}
+	
+	public List<Match> getLiked(int id){
+		Optional<List<Match>> optionalMatchList = mDAO.findByUser2(id);
+		List<Match> matchList = optionalMatchList.get();
+		return matchList;
 	}
 	
 	
