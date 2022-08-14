@@ -1,52 +1,133 @@
-<div class="center-container signup">
-    <div class="signup-header-div">
-        <h1 class="signup-header no-margin">&lt;h1&gt;<p class="signup-header-color">Update</p>&lt;/h1&gt;</h1>
-    </div>
-    <div class="signup-div" >
+<div class="main-div">
+  <mat-card>
+    <div class="center-container signup">
+      <div class="signup-header-div">
+        <h1 class="signup-header no-margin">
+          &lt;h1&gt;
+          <p class="signup-header-color">Update</p>
+          &lt;/h1&gt;
+        </h1>
+      </div>
+      <div class="signup-div">
         <form *ngIf="currentUser">
-        <div class="form-input">
-            <label for="firstname" class="form-label">&lt;input id=<p class="form-label-color">"username"</p>/&gt;</label>
-            <br>
-            <input type="text" class="form-input" name="username" [(ngModel)]="form.username" required #username="ngModel" />
-        </div>
-            <div class="form-input">
-                <label for="password" class="form-label">&lt;input id=<p class="form-label-color">"password"</p>
-                    /&gt;</label>
-                <br>
-                <input type="password" name="password" [(ngModel)]="form.password" required #password="ngModel"/>
-            </div>
-            <div class="form-input">
-                <label for="first_name" class="form-label">&lt;input id=<p class="form-label-color">"first_name"</p>
-                    /&gt;</label>
-                <br>
-                <input type="text" name="first_name" [(ngModel)]="form.first_name" required #first_name="ngModel"/>
-            </div>
-            <div class="form-input">
-                <label for="birthdate" class="form-label">&lt;input id=<p class="form-label-color">"birthdate"</p>
-                    /&gt;</label>
-                <br>
-                <input type="date" name="date_of_birth" [(ngModel)]="form.date_of_birth" required #date_of_birth="ngModel"/>
-            </div>
-            <div class="form-input">
-                <label for="city" class="form-label">&lt;input id=<p class="form-label-color">"city"</p>/&gt;</label>
-                <br>
-                <input type="text" name="city" [(ngModel)]="form.city" required #city="ngModel"/>
-            </div>
-            <div class="form-input">
-                <label for="state" class="form-label">&lt;input id=<p class="form-label-color">"state"</p>/&gt;</label>
-                <br>
-                <input type="text" name="state" [(ngModel)]="form.state" required #state="ngModel"/>
-            </div>
-            <div class="form-input">
-                <label for="country" class="form-label">&lt;input id=<p class="form-label-color">"country"</p>
-                    /&gt;</label>
-                <br>
-                <input type="text" name="country" [(ngModel)]="form.country" required #country="ngModel"/>
-            </div>
-            <div class="form-group small-margin">
-                <button type="submit" class="button submit-button small-margin" (click)="updateUser()">Update Profile</button>
-            </div>
-            <p>{{errorMessage}}</p>
+          <div class="form-input">
+            <label for="firstname" class="form-label"
+              >&lt;input id=
+              <p class="form-label-color">"username"</p>
+              /&gt;</label
+            >
+            <br />
+            <input
+              type="text"
+              class="form-input"
+              name="username"
+              [(ngModel)]="form.username"
+              required
+              #username="ngModel"
+            />
+          </div>
+          <div class="form-input">
+            <label for="password" class="form-label"
+              >&lt;input id=
+              <p class="form-label-color">"password"</p>
+              /&gt;</label
+            >
+            <br />
+            <input
+              type="password"
+              name="password"
+              [(ngModel)]="form.password"
+              required
+              #password="ngModel"
+            />
+          </div>
+          <div class="form-input">
+            <label for="first_name" class="form-label"
+              >&lt;input id=
+              <p class="form-label-color">"first_name"</p>
+              /&gt;</label
+            >
+            <br />
+            <input
+              type="text"
+              name="first_name"
+              [(ngModel)]="form.first_name"
+              required
+              #first_name="ngModel"
+            />
+          </div>
+          <div class="form-input">
+            <label for="birthdate" class="form-label"
+              >&lt;input id=
+              <p class="form-label-color">"birthdate"</p>
+              /&gt;</label
+            >
+            <br />
+            <input
+              type="date"
+              name="date_of_birth"
+              [(ngModel)]="form.date_of_birth"
+              required
+              #date_of_birth="ngModel"
+            />
+          </div>
+          <div class="form-input">
+            <label for="city" class="form-label"
+              >&lt;input id=
+              <p class="form-label-color">"city"</p>
+              /&gt;</label
+            >
+            <br />
+            <input
+              type="text"
+              name="city"
+              [(ngModel)]="form.city"
+              required
+              #city="ngModel"
+            />
+          </div>
+          <div class="form-input">
+            <label for="state" class="form-label"
+              >&lt;input id=
+              <p class="form-label-color">"state"</p>
+              /&gt;</label
+            >
+            <br />
+            <input
+              type="text"
+              name="state"
+              [(ngModel)]="form.state"
+              required
+              #state="ngModel"
+            />
+          </div>
+          <div class="form-input">
+            <label for="country" class="form-label"
+              >&lt;input id=
+              <p class="form-label-color">"country"</p>
+              /&gt;</label
+            >
+            <br />
+            <input
+              type="text"
+              name="country"
+              [(ngModel)]="form.country"
+              required
+              #country="ngModel"
+            />
+          </div>
+          <div class="form-group small-margin">
+            <button
+              type="submit"
+              class="button submit-button small-margin"
+              (click)="updateUser()"
+            >
+              Update Profile
+            </button>
+          </div>
+          <p>{{ errorMessage }}</p>
         </form>
+      </div>
     </div>
+  </mat-card>
 </div>
