@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProfileComponent } from './components/profile/profile.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MingleComponent } from './components/mingle/mingle.component';
+import { CommonModule } from '@angular/common';
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,7 @@ import { MingleComponent } from './components/mingle/mingle.component';
     LoginComponent,
     SignupComponent,
     ProfileComponent,
+    UpdateComponent,
     MingleComponent
   ],
   imports: [
@@ -32,6 +35,7 @@ import { MingleComponent } from './components/mingle/mingle.component';
     ReactiveFormsModule,
     HttpClientModule,
     FormsModule,
+    CommonModule,
     BrowserAnimationsModule,
   ],
   providers: [],

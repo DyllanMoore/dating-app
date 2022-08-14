@@ -30,6 +30,11 @@ const routes: Routes = [
   },
 
   {
+    path: 'profile/:id',
+    component: UpdateComponent
+  },
+
+  {
     path: 'mingle',
     component: MingleComponent
   },
