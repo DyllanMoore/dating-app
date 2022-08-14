@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { ThemePalette, MatRipple } from '@angular/material/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-welcome',
@@ -7,11 +6,6 @@ import { ThemePalette, MatRipple } from '@angular/material/core';
   styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent implements OnInit {
-  @Input()
-  color: ThemePalette = 'accent';
-
-  defaultColor: ThemePalette = 'accent';
-
   constructor() {}
 
   ngOnInit(): void {}

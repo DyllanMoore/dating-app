@@ -6,6 +6,15 @@ mat-card {
   align-content: center;
   text-align: center;
   font-family: "Inconsolata", "Roboto", "Helvetica", "Arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1,
+h3 {
+  color: black;
 }
 
 mat-card-title {
@@ -21,14 +30,9 @@ mat-card-content {
   margin-top: 16px;
 }
 
-button {
-  margin-top: 16px;
-  align-content: center;
-  margin-bottom: 16px;
-}
-
-.space {
-  width: 40px;
-  height: auto;
-  display: inline-block;
+.main-div {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

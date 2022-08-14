@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit {
   isLoggedIn = false;
   username: string | undefined;
 
+  constructor() {}
   // constructor(private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
