@@ -90,6 +90,21 @@ public Users(int user_id, String username, String password, String first_name, S
 }
 
 
+
+public Users(int user_id, String username, String password, String first_name, String city, String state,
+		String country, Date date_of_birth) {
+	super();
+	this.user_id = user_id;
+	this.username = username;
+	this.password = password;
+	this.first_name = first_name;
+	this.city = city;
+	this.state = state;
+	this.country = country;
+	this.date_of_birth = date_of_birth;
+}
+
+
 public Users(String username, String password, String first_name, String city, String state, String country,
 		Date date_of_birth, QuestionOne questionOne, QuestionTwo questionTwo, QuestionThree questionThree,
 		byte[] pfp) {

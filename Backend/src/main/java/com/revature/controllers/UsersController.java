@@ -107,15 +107,13 @@ public class UsersController {
 		return ResponseEntity.accepted().body(newUser);
 	}
 	
-	@PutMapping("/{id}")
-	public ResponseEntity updateUser(@PathVariable("id") Users user) {
-		Optional<Users> optionalUsers = uDAO.findByUsername(user.getUsername());
+	@PutMapping("/{user_id}")
+	public ResponseEntity updateUser(@PathVariable("user_id") Users user) {
+		Optional<Users> optionalUsers = uDAO.findById(user.getUser_id());
 		
 		Users oldUsers;
 		if(optionalUsers.isPresent()) {
 			oldUsers = optionalUsers.get();
-			user.setUser_id(oldUsers.getUser_id());
-			user.setpfp(compressBytes(user.getpfp()));
 			Users newUser = uDAO.save(user);
 			return ResponseEntity.accepted().body(newUser);
 		}
