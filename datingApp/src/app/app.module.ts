@@ -15,6 +15,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MingleComponent } from './components/mingle/mingle.component';
 import { CommonModule } from '@angular/common';
 import { UpdateComponent } from './components/update/update.component';
+import { NgParticlesModule } from 'ng-particles';
+import { MatCardModule } from '@angular/material/card';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,7 @@ import { UpdateComponent } from './components/update/update.component';
     SignupComponent,
     ProfileComponent,
     UpdateComponent,
-    MingleComponent
+    MingleComponent,
   ],
   imports: [
     BrowserModule,
@@ -37,8 +40,11 @@ import { UpdateComponent } from './components/update/update.component';
     FormsModule,
     CommonModule,
     BrowserAnimationsModule,
+    NgParticlesModule,
+    MatCardModule,
+    MatProgressBarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,3 +1,10 @@
 <app-navbar></app-navbar>
 
+<ng-particles
+  [id]="id"
+  [options]="particlesOptions"
+  [particlesInit]="particlesInit"
+  (particlesLoaded)="particlesLoaded($event)"
+></ng-particles>
+
 <router-outlet></router-outlet>

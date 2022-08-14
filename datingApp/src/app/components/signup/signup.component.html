@@ -1,6 +1,21 @@
-<div class="center-container signup">
+<div class="main-div">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        <h1>Welcome to Programmers Mingle</h1>
+      </mat-card-title>
+      <mat-card-subtitle>
+        <h3>Where you may (or may not) find your partner in runtime</h3>
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-progress-bar mode="buffer"></mat-progress-bar>
+
     <div class="signup-header-div">
-        <h1 class="signup-header no-margin">&lt;h1&gt;<p class="signup-header-color">Signup</p>&lt;/h1&gt;</h1>
+      <h1 class="signup-header no-margin">
+        &lt;h1&gt;
+        <p class="signup-header-color">Signup</p>
+        &lt;/h1&gt;
+      </h1>
     </div>
     <div class="signup-div small-margin">
       <form
@@ -11,8 +26,12 @@
         novalidate
       >
         <div class="form-input">
-            <label for="firstname" class="form-label">&lt;input id=<p class="form-label-color">"username"</p>/&gt;</label>
-            <br>
+          <label for="firstname" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"username"</p>
+            /&gt;</label
+          >
+          <br />
           <input
             type="text"
             class="form-input"
@@ -22,10 +41,14 @@
             #username="ngModel"
           />
         </div>
-        <br>
+        <br />
         <div class="form-input">
-            <label for="password" class="form-label">&lt;input id=<p class="form-label-color">"password"</p>/&gt;</label>
-            <br>
+          <label for="password" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"password"</p>
+            /&gt;</label
+          >
+          <br />
           <input
             type="password"
             class="form-input"
@@ -35,10 +58,14 @@
             #password="ngModel"
           />
         </div>
-        <br>
+        <br />
         <div class="form-input">
-            <label for="passwordAuth" class="form-label">&lt;input id=<p class="form-label-color">"retype_password"</p>/&gt;</label>
-            <br>
+          <label for="passwordAuth" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"retype_password"</p>
+            /&gt;</label
+          >
+          <br />
           <input
             type="password"
             class="form-input"
@@ -48,10 +75,14 @@
             #passwordAuth="ngModel"
           />
         </div>
-        <br>
+        <br />
         <div class="form-input">
-            <label for="first_name" class="form-label">&lt;input id=<p class="form-label-color">"first_name"</p>/&gt;</label>
-            <br>
+          <label for="first_name" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"first_name"</p>
+            /&gt;</label
+          >
+          <br />
           <input
             type="text"
             class="form-inout"
@@ -61,10 +92,14 @@
             #first_name="ngModel"
           />
         </div>
-        <br>
+        <br />
         <div class="form-input">
-            <label for="birthdate" class="form-label">&lt;input id=<p class="form-label-color">"birthdate"</p>/&gt;</label>
-            <br>
+          <label for="birthdate" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"birthdate"</p>
+            /&gt;</label
+          >
+          <br />
           <input
             type="date"
             class="form-input"
@@ -74,10 +109,14 @@
             #date_of_birth="ngModel"
           />
         </div>
-        <br>
+        <br />
         <div class="form-input">
-            <label for="city" class="form-label">&lt;input id=<p class="form-label-color">"city"</p>/&gt;</label>
-            <br>
+          <label for="city" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"city"</p>
+            /&gt;</label
+          >
+          <br />
           <input
             type="text"
             class="form-input"
@@ -87,10 +126,14 @@
             #city="ngModel"
           />
         </div>
-        <br>
+        <br />
         <div class="form-input">
-            <label for="state" class="form-label">&lt;input id=<p class="form-label-color">"state"</p>/&gt;</label>
-            <br>
+          <label for="state" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"state"</p>
+            /&gt;</label
+          >
+          <br />
           <input
             type="text"
             class="form-input"
@@ -100,10 +143,14 @@
             #state="ngModel"
           />
         </div>
-        <br>
+        <br />
         <div class="form-input">
-            <label for="country" class="form-label">&lt;input id=<p class="form-label-color">"country"</p>/&gt;</label>
-            <br>
+          <label for="country" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"country"</p>
+            /&gt;</label
+          >
+          <br />
           <input
             type="text"
             class="form-input"
@@ -113,77 +160,106 @@
             #country="ngModel"
           />
         </div>
-        <br>
+        <br />
         <div class="form-input">
-          <label for="question1" class="form-label">&lt;input id=<p class="form-label-color">"question_1"</p>/&gt;</label>
+          <label for="question1" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"question_1"</p>
+            /&gt;</label
+          >
           <p>What is your favorite coding language?</p>
-        <select
-          class="form-input"
-          name="language"
-          [(ngModel)]="form.question_1_id"
-          required
-          #question_1_id="ngModel">
-          <option for="language" value="1">Java</option>
-          <option for="language" value="2">TypeScript</option>
-          <option for="language" value="3">Python</option>
-          <option for="language" value="4">HTML/CSS</option>
-          <option for="language" value="5">Scala</option>
+          <select
+            class="form-input"
+            name="language"
+            [(ngModel)]="form.question_1_id"
+            required
+            #question_1_id="ngModel"
+          >
+            <option for="language" value="1">Java</option>
+            <option for="language" value="2">TypeScript</option>
+            <option for="language" value="3">Python</option>
+            <option for="language" value="4">HTML/CSS</option>
+            <option for="language" value="5">Scala</option>
           </select>
-      </div>
-      <br>
-      <div class="form-input">
-        <label for="question2" class="form-label">&lt;input id=<p class="form-label-color">"question_2"</p>/&gt;</label>
-        <p>What do you prefer to do?</p>
-      <select
-        class="form-input"
-        name="preference"
-        [(ngModel)]="form.question_2_id"
-        required
-        #question_2_id="ngModel">
-        <option for="preference" value="1">Frontend</option>
-        <option for="preference" value="2">Backend</option>
-        <option for="preference" value="3">Fullstack</option>
-        <option for="preference" value="4">Cyber Security</option>
-        <option for="preference" value="5">Blockchain/Web3</option>
-        </select>
-    </div>
-    <br>
-    <div class="form-input">
-      <label for="question3" class="form-label">&lt;input id=<p class="form-label-color">"question_3"</p>/&gt;</label>
-      <p>How do you pronounce SQL?</p>
-    <select
-      class="form-input"
-      name="sql"
-      [(ngModel)]="form.question_3_id"
-      required
-      #question_3_id="ngModel">
-      <option for="sql" value="1">ESS-QUE-ELL</option>
-      <option for="sql" value="2">Sequel</option>
-      <option for="sql" value="3">Squeal</option>
-      <option for="sql" value="4">Squirrel</option>
-      <option for="sql" value="5">Squell</option>
-      </select>
-  </div>
-  <br>
-  <div class="form-input">
-    <label for="pfp" class="form-label">&lt;input id=<p class="form-label-color">"profile_picture"</p>/&gt;</label>
-    <br>
-  <input
-    type="file"
-    class="form-input"
-    name="pfp"
-    [(ngModel)]="form.pfp"
-    required
-    #pfp="ngModel"
-  />
-</div>
-  <br>
+        </div>
+        <br />
+        <div class="form-input">
+          <label for="question2" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"question_2"</p>
+            /&gt;</label
+          >
+          <p>What do you prefer to do?</p>
+          <select
+            class="form-input"
+            name="preference"
+            [(ngModel)]="form.question_2_id"
+            required
+            #question_2_id="ngModel"
+          >
+            <option for="preference" value="1">Frontend</option>
+            <option for="preference" value="2">Backend</option>
+            <option for="preference" value="3">Fullstack</option>
+            <option for="preference" value="4">Cyber Security</option>
+            <option for="preference" value="5">Blockchain/Web3</option>
+          </select>
+        </div>
+        <br />
+        <div class="form-input">
+          <label for="question3" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"question_3"</p>
+            /&gt;</label
+          >
+          <p>How do you pronounce SQL?</p>
+          <select
+            class="form-input"
+            name="sql"
+            [(ngModel)]="form.question_3_id"
+            required
+            #question_3_id="ngModel"
+          >
+            <option for="sql" value="1">ESS-QUE-ELL</option>
+            <option for="sql" value="2">Sequel</option>
+            <option for="sql" value="3">Squeal</option>
+            <option for="sql" value="4">Squirrel</option>
+            <option for="sql" value="5">Squell</option>
+          </select>
+        </div>
+        <br />
+        <div class="form-input">
+          <label for="pfp" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"profile_picture"</p>
+            /&gt;</label
+          >
+          <br />
+          <input
+            type="file"
+            class="form-input"
+            name="pfp"
+            [(ngModel)]="form.pfp"
+            required
+            #pfp="ngModel"
+          />
+        </div>
+        <br />
         <div class="form-group small-margin">
-          <button type="submit" class="button submit-button small-margin">Sign Up</button>
+          <button type="submit" class="button submit-button small-margin">
+            Sign Up
+          </button>
         </div>
       </form>
       <div class="link-div">
-        <a class="link" routerLink="/login">Already have an account? Click to login!</a>
+        <a class="link" routerLink="/login"
+          >Already have an account? Click to login!</a
+        >
+      </div>
     </div>
-    </div>
-  </div>
+  </mat-card>
+</div>
+
+<!--
+<div class="center-container signup">
+
+  </div> -->
