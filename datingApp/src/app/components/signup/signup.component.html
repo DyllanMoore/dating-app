@@ -165,6 +165,19 @@
       </select>
   </div>
   <br>
+  <div class="form-input">
+    <label for="pfp" class="form-label">&lt;input id=<p class="form-label-color">"profile_picture"</p>/&gt;</label>
+    <br>
+  <input
+    type="file"
+    class="form-input"
+    name="pfp"
+    [(ngModel)]="form.pfp"
+    required
+    #pfp="ngModel"
+  />
+</div>
+  <br>
         <div class="form-group small-margin">
           <button type="submit" class="button submit-button small-margin">Sign Up</button>
         </div>
