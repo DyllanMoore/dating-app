@@ -1,38 +1,51 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 import { AuthService } from 'src/app/services/auth.service';
+import { TokenStorageService } from 'src/app/services/token-storage.service';
+
 @Component({
   selector: 'app-update',
   templateUrl: './update.component.html',
   styleUrls: ['./update.component.css']
 })
 export class UpdateComponent implements OnInit {
+  
+  constructor(
+    private authService: AuthService,
+    private tokenStorageService: TokenStorageService
+  ) { }
+
+  currentUser = this.tokenStorageService.getUser();
+
   form: any = {
-    username: null,
-    password: null,
-    first_name: null,
-    city: null,
-    state: null,
-    country: null,
-    date_of_birth: null
+    username: this.currentUser.username,
+    password: this.currentUser.password,
+    first_name: this.currentUser.first_name,
+    city: this.currentUser.city,
+    state: this.currentUser.state,
+    country: this.currentUser.country,
+    date_of_birth: this.currentUser.date_of_birth
   };
-  isSuccessful = false;
-  isSignUpFailed = false;
-  errorMessage = '';
-  constructor(private authService: AuthService) { }
+  errorMessage='';
+  
   ngOnInit(): void {
   }
-  onSubmit(): void {
-    const { username, password, first_name, city, state, country, date_of_birth, question_1_id, question_2_id, question_3_id } = this.form;
-    this.authService.signup(username, password, first_name, city, state, country, date_of_birth, question_1_id, question_2_id, question_3_id ).subscribe(
+
+  updateUser(): void {
+    const { username, password, first_name, city, state, country, date_of_birth} = this.form;
+    this.authService.update(username, password, first_name, city, state, country, date_of_birth).subscribe(
       data => {
         console.log(data);
-        this.isSuccessful = true;
-        this.isSignUpFailed = false;
+        this.reloadPage();
       },
       err => {
         this.errorMessage = err.error.message;
-        this.isSignUpFailed = true;
+
       }
     );
+  }
+  reloadPage(): void {
+    console.log(this.form)
+    window.location.href = "http://localhost:4200/profile";
   }
 }

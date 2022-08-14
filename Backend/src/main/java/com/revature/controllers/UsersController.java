@@ -107,8 +107,8 @@ public class UsersController {
 		return ResponseEntity.accepted().body(newUser);
 	}
 	
-	@PutMapping
-	public ResponseEntity updateUser(@RequestBody Users user) {
+	@PutMapping("/{id}")
+	public ResponseEntity updateUser(@PathVariable("id") Users user) {
 		Optional<Users> optionalUsers = uDAO.findByUsername(user.getUsername());
 		
 		Users oldUsers;
