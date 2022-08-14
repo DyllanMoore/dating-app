@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatCardModule } from '@angular/material/card';
+import { Component, Input, OnInit } from '@angular/core';
+import { ThemePalette, MatRipple } from '@angular/material/core';
 
 @Component({
   selector: 'app-welcome',
@@ -7,6 +7,11 @@ import { MatCardModule } from '@angular/material/card';
   styleUrls: ['./welcome.component.css'],
 })
 export class WelcomeComponent implements OnInit {
+  @Input()
+  color: ThemePalette = 'accent';
+
+  defaultColor: ThemePalette = 'accent';
+
   constructor() {}
 
   ngOnInit(): void {}
