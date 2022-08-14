@@ -8,50 +8,49 @@ import { MingleComponent } from './components/mingle/mingle.component';
 import { MatchesComponent } from './components/matches/matches.component';
 import { UpdateComponent } from './components/update/update.component';
 const routes: Routes = [
-
   {
-    path:'',
-    component: HomeComponent
+    path: '',
+    component: LoginComponent,
   },
 
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
 
   {
     path: 'signup',
-    component: SignupComponent
+    component: SignupComponent,
   },
 
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
   },
 
   {
     path: 'profile/:id',
-    component: UpdateComponent
+    component: UpdateComponent,
   },
 
   {
     path: 'mingle',
-    component: MingleComponent
+    component: MingleComponent,
   },
 
   {
     path: 'matches',
-    component: MatchesComponent
+    component: MatchesComponent,
   },
 
   {
     path: 'update',
-    component: UpdateComponent
-  }
+    component: UpdateComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
