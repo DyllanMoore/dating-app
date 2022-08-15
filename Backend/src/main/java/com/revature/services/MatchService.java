@@ -1,5 +1,6 @@
 package com.revature.services;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -62,13 +63,45 @@ public class MatchService {
 
 	public List<Match> getLikedBy(int id) {
 		Optional<List<Match>> optionalMatchList = mDAO.findByUser1(id);
-		List<Match> matchList = optionalMatchList.get();
+		List<Match> matchList = new ArrayList<Match>();
+		if(optionalMatchList.isPresent()) {
+			matchList = optionalMatchList.get();
+			
+			optionalMatchList = mDAO.findByUser2AndMutual(id,true);
+			if(optionalMatchList.isPresent()) {
+				matchList.addAll(optionalMatchList.get());
+			}
+		}
 		return matchList;
 	}
 	
 	public List<Match> getLiked(int id){
 		Optional<List<Match>> optionalMatchList = mDAO.findByUser2(id);
-		List<Match> matchList = optionalMatchList.get();
+		List<Match> matchList = new ArrayList<Match>();
+		if(optionalMatchList.isPresent()) {
+			matchList = optionalMatchList.get();
+			
+			optionalMatchList = mDAO.findByUser1AndMutual(id,true);
+			if(optionalMatchList.isPresent()) {
+				matchList.addAll(optionalMatchList.get());
+			}
+		}
+		return matchList;
+	}
+
+	public List<Match> getMatches(int id) {
+		Optional<List<Match>> optionalMatchList = mDAO.findByUser2AndMutual(id, true);
+		
+		List<Match> matchList = new ArrayList<Match>();
+		if(optionalMatchList.isPresent()) {
+			matchList.addAll(optionalMatchList.get());
+		}
+		
+		optionalMatchList = mDAO.findByUser1AndMutual(id, true);
+		if(optionalMatchList.isPresent()) {
+			matchList.addAll(optionalMatchList.get());
+		}
+		
 		return matchList;
 	}
 	
