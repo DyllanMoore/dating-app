@@ -2,6 +2,7 @@ package com.revature.controllers;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.zip.DataFormatException;
@@ -21,6 +22,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.revature.DAOs.UsersDAO;
 import com.revature.models.LoginDTO;
 import com.revature.models.Users;
+
+import okhttp3.MediaType;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
 
 @RestController
 @RequestMapping(value="/users")
@@ -120,6 +126,57 @@ public class UsersController {
 			return ResponseEntity.accepted().body(newUser);
 		}
 		return ResponseEntity.badRequest().build();
+	}
+	
+	@GetMapping("/nearby/{username}")
+	public ResponseEntity<List<Users>> getNearby(@PathVariable("username") String username){
+		Optional<Users> optionalUsers= uDAO.findByUsername(username);
+		
+		if(optionalUsers.isPresent()) {
+			Users user = optionalUsers.get();
+			
+			List<Users> usersList = uDAO.findAll();
+			List<Users> nearbyUsers = new ArrayList<Users>();
+			
+			for(Users u: usersList) {
+				OkHttpClient client = new OkHttpClient().newBuilder().build();
+				MediaType mediaType = MediaType.parse("text/plain");
+				okhttp3.RequestBody body = okhttp3.RequestBody.create("",mediaType);
+				Request request = new Request.Builder()
+						.url("https://maps.googleapis.com/maps/api/distancematrix/json?origins=" + user.getCity() + "%20" + 
+								user.getState() + "&destinations=" + u.getCity() + "%20" + u.getState() + 
+								"&units=imperial&key=AIzaSyBqSin87Htc0MCHHdRrtjcoxJdd1VEe0NU")
+						.method("GET", null)
+						.build();
+				
+				String responseString = "";
+				try {
+					Response response = client.newCall(request).execute();
+					responseString = response.body().string();
+
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+				
+				System.out.println(responseString);
+				int start = responseString.indexOf("text\" : ");
+				int end = responseString.indexOf("\",");
+				
+				String distanceStr = responseString.substring(start+9,end-3);
+				
+				Integer distance = Integer.valueOf(distanceStr.replace(",", ""));
+				System.out.println(distance);
+				
+				//Checking if current user is closer than 50 miles
+				if(distance < 50) {
+					u.setpfp(compressBytes(u.getpfp()));
+					nearbyUsers.add(u);
+				}
+				
+			}
+			return ResponseEntity.ok().body(nearbyUsers);
+		}
+		return null;
 	}
 	
 	//Compresses byte data
