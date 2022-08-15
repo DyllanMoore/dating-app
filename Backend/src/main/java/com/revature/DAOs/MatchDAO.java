@@ -15,5 +15,9 @@ public interface MatchDAO extends JpaRepository<Match,Integer>{
 	public Optional<List<Match>> findByUser1(int id);
 
 	public Optional<List<Match>> findByUser2(int id);
+
+	public Optional<List<Match>> findByUser2AndMutual(int id, boolean b);
+
+	public Optional<List<Match>> findByUser1AndMutual(int id, boolean b);
 	
 }
