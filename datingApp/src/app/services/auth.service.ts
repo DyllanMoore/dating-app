@@ -35,7 +35,7 @@ export class AuthService {
   }
 
   update(username: string, password: string, first_name: string, city: string, state: string, country: string, date_of_birth: Date): Observable<any> {
-    return this.http.put(AUTH_API + "/" + this.currentUser.user_id, {
+    return this.http.put(AUTH_API, {
       username,
       password,
       first_name,
@@ -43,5 +43,10 @@ export class AuthService {
       state,
       country,
       date_of_birth
-    }, httpOptions);
-  }} 
+    });
+  }
+
+  getUser(username: String): Observable<any> {
+    return this.http.get(AUTH_API + "/" + username)
+  }
+} 
