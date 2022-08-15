@@ -115,6 +115,73 @@
               required
               #country="ngModel"
             />
+            <br />
+        <div class="form-input">
+          <label for="question1" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"question_1"</p>
+            /&gt;</label
+          >
+          <p>What is your favorite coding language?</p>
+          <select
+            class="form-input"
+            name="language"
+            [(ngModel)]="form.question_1_id"
+            required
+            #question_1_d="ngModel"
+          >
+            <option for="language" [ngValue]=1>Java</option>
+            <option for="language" [ngValue]=2>TypeScript</option>
+            <option for="language" [ngValue]=3>Python</option>
+            <option for="language" [ngValue]=4>HTML/CSS</option>
+            <option for="language" [ngValue]=5>Scala</option>
+          </select>
+        </div>
+        <br />
+        <div class="form-input">
+          <label for="question2" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"question_2"</p>
+            /&gt;</label
+          >
+          <p>What do you prefer to do?</p>
+          <select
+            class="form-input"
+            name="preference"
+            [(ngModel)]="form.question_2_id"
+            required
+            #question_2_id="ngModel"
+          >
+            <option for="preference" [ngValue]=1>Frontend</option>
+            <option for="preference" [ngValue]=2>Backend</option>
+            <option for="preference" [ngValue]=3>Fullstack</option>
+            <option for="preference" [ngValue]=4>Cyber Security</option>
+            <option for="preference" [ngValue]=5>Blockchain/Web3</option>
+          </select>
+        </div>
+        <br />
+        <div class="form-input">
+          <label for="question3" class="form-label"
+            >&lt;input id=
+            <p class="form-label-color">"question_3"</p>
+            /&gt;</label
+          >
+          <p>How do you pronounce SQL?</p>
+          <select
+            class="form-input"
+            name="sql"
+            [(ngModel)]="form.question_3_id"
+            required
+            #question_3_id="ngModel"
+          >
+            <option for="sql" [ngValue]=1>ESS-QUE-ELL</option>
+            <option for="sql" [ngValue]=2>Sequel</option>
+            <option for="sql" [ngValue]=3>Squeal</option>
+            <option for="sql" [ngValue]=4>Squirrel</option>
+            <option for="sql" [ngValue]=5>Squell</option>
+          </select>
+        </div>
+        <br />
           </div>
           <div class="form-group small-margin">
             <button

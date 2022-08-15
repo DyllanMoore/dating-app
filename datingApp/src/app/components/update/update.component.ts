@@ -24,7 +24,10 @@ export class UpdateComponent implements OnInit {
     city: this.currentUser.city,
     state: this.currentUser.state,
     country: this.currentUser.country,
-    date_of_birth: this.currentUser.date_of_birth
+    date_of_birth: this.currentUser.date_of_birth,
+    question_1_id: this.currentUser.question_1_id,
+    question_2_id: this.currentUser.question_2_id,
+    question_3_id: this.currentUser.question_3_id
   };
   errorMessage='';
   
@@ -32,8 +35,8 @@ export class UpdateComponent implements OnInit {
   }
 
   updateUser(): void {
-    const { username, password, first_name, city, state, country, date_of_birth} = this.form;
-    this.authService.update(username, password, first_name, city, state, country, date_of_birth).subscribe(
+    const { username, password, first_name, city, state, country, date_of_birth, question_1_id, question_2_id, question_3_id} = this.form;
+    this.authService.update(username, password, first_name, city, state, country, date_of_birth, question_1_id, question_2_id, question_3_id).subscribe(
       data => {
         console.log(data);
         this.reloadPage();

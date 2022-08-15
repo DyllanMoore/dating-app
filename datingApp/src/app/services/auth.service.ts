@@ -19,7 +19,7 @@ export class AuthService {
       password
     }, httpOptions);
   }
-  signup(username: string, password: string, first_name: string, city: string, state: string, country: string, date_of_birth: Date, question1Id: Number, question2Id: Number, question3Id: Number): Observable<any> {
+  signup(username: string, password: string, first_name: string, city: string, state: string, country: string, date_of_birth: Date, question_1_id: Number, question_2_id: Number, question_3_id: Number): Observable<any> {
     return this.http.post(AUTH_API, {
       username,
       password,
@@ -28,13 +28,13 @@ export class AuthService {
       state,
       country,
       date_of_birth, 
-      question1Id,
-      question2Id,
-      question3Id
+      question_1_id,
+      question_2_id,
+      question_3_id
     }, httpOptions);
   }
 
-  update(username: string, password: string, first_name: string, city: string, state: string, country: string, date_of_birth: Date): Observable<any> {
+  update(username: string, password: string, first_name: string, city: string, state: string, country: string, date_of_birth: Date, question_1_id: Number, question_2_id: Number, question_3_id: Number): Observable<any> {
     return this.http.put(AUTH_API, {
       username,
       password,
@@ -42,7 +42,10 @@ export class AuthService {
       city,
       state,
       country,
-      date_of_birth
+      date_of_birth,
+      question_1_id,
+      question_2_id,
+      question_3_id
     });
   }
 

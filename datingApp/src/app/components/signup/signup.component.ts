@@ -13,7 +13,10 @@ export class SignupComponent implements OnInit {
     city: null,
     state: null,
     country: null,
-    date_of_birth: null
+    date_of_birth: null,
+    question_1_id: null,
+    question_2_id: null,
+    question_3_id: null
   };
   isSuccessful = false;
   isSignUpFailed = false;
