@@ -7,9 +7,18 @@
             </div>   
         </div>
         <div class="profile-div">
-            <ul *ngFor="let users of users">
-                <li class="text">Name: {{users[1].first_name}}</li> 
-                <li class="text">Location: {{users[1].state}}</li>
+            <h2 class="profile-header">Quoey</h2>
+            <ul>
+                <li class="text">City: Oklahoma City</li>
+                <li class="text">State: Oklahoma</li>
+                <li class="text">Country: USA</li>
+                <li class="text">Age: 32</li>
+                <br>
+                <li class="text">Favorite Coding Language: Scala</li>
+                <br>
+                <li class="text">I Pronounce SQL as: Squell</li>
+                <br>
+                <li class="text"> I Work in: Blockchain/Web 3</li>
             </ul>    
         </div>
         <button onClick=onLike() class="right-button button">Like</button>

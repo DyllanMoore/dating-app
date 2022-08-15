@@ -39,7 +39,8 @@ body{
     margin: 20vh auto 0vh;
 }
 
-.signup {
+.signup,
+.update {
     margin: 1vh auto 0vh;
 }
 
