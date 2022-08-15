@@ -48,17 +48,14 @@ public class Users {
 	@Column
 	private Date date_of_birth;
 	
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "question_1_id")
-	private QuestionOne questionOne;
+	@Column
+	private int question_1_id;
 	
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "question_2_id")
-	private QuestionTwo questionTwo;
+	@Column
+	private int question_2_id;
 	
-	@ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-	@JoinColumn(name = "question_3_id")
-	private QuestionThree questionThree;
+	@Column
+	private int question_3_id;
 	
 	@Column(length = 1000)
 	private byte[] pfp;
@@ -72,8 +69,7 @@ public class Users {
 
 
 public Users(int user_id, String username, String password, String first_name, String city, String state,
-		String country, Date date_of_birth, QuestionOne questionOne, QuestionTwo questionTwo,
-		QuestionThree questionThree, byte[] pfp) {
+		String country, Date date_of_birth, int question_1_id, int question_2_id, int question_3_id, byte[] pfp) {
 	super();
 	this.user_id = user_id;
 	this.username = username;
@@ -83,31 +79,15 @@ public Users(int user_id, String username, String password, String first_name, S
 	this.state = state;
 	this.country = country;
 	this.date_of_birth = date_of_birth;
-	this.questionOne = questionOne;
-	this.questionTwo = questionTwo;
-	this.questionThree = questionThree;
+	this.question_1_id = question_1_id;
+	this.question_2_id = question_2_id;
+	this.question_3_id = question_3_id;
 	this.pfp = pfp;
-}
-
-
-
-public Users(int user_id, String username, String password, String first_name, String city, String state,
-		String country, Date date_of_birth) {
-	super();
-	this.user_id = user_id;
-	this.username = username;
-	this.password = password;
-	this.first_name = first_name;
-	this.city = city;
-	this.state = state;
-	this.country = country;
-	this.date_of_birth = date_of_birth;
 }
 
 
 public Users(String username, String password, String first_name, String city, String state, String country,
-		Date date_of_birth, QuestionOne questionOne, QuestionTwo questionTwo, QuestionThree questionThree,
-		byte[] pfp) {
+		Date date_of_birth, int question_1_id, int question_2_id, int question_3_id, byte[] pfp) {
 	super();
 	this.username = username;
 	this.password = password;
@@ -116,19 +96,10 @@ public Users(String username, String password, String first_name, String city, S
 	this.state = state;
 	this.country = country;
 	this.date_of_birth = date_of_birth;
-	this.questionOne = questionOne;
-	this.questionTwo = questionTwo;
-	this.questionThree = questionThree;
+	this.question_1_id = question_1_id;
+	this.question_2_id = question_2_id;
+	this.question_3_id = question_3_id;
 	this.pfp = pfp;
-}
-
-
-@Override
-public String toString() {
-	return "Users [user_id=" + user_id + ", username=" + username + ", password=" + password + ", first_name="
-			+ first_name + ", city=" + city + ", state=" + state + ", country=" + country + ", date_of_birth="
-			+ date_of_birth + ", questionOne=" + questionOne + ", questionTwo=" + questionTwo + ", questionThree="
-			+ questionThree + ", pfp=" + pfp + "]";
 }
 
 
@@ -212,35 +183,6 @@ public void setDate_of_birth(Date date_of_birth) {
 }
 
 
-public QuestionOne getQuestionOne() {
-	return questionOne;
-}
-
-
-public void setQuestionOne(QuestionOne questionOne) {
-	this.questionOne = questionOne;
-}
-
-
-public QuestionTwo getQuestionTwo() {
-	return questionTwo;
-}
-
-
-public void setQuestionTwo(QuestionTwo questionTwo) {
-	this.questionTwo = questionTwo;
-}
-
-
-public QuestionThree getQuestionThree() {
-	return questionThree;
-}
-
-
-public void setQuestionThree(QuestionThree questionThree) {
-	this.questionThree = questionThree;
-}
-
 
 public byte[] getpfp() {
 	return pfp;
@@ -251,7 +193,28 @@ public void setpfp(byte[] pfp) {
 	this.pfp = pfp;
 }
 
-	
-	
+public int getQuestion_1_id() {
+	return question_1_id;
+}
 
+public void setQuestion_1_id(int question_1_id) {
+	this.question_1_id = question_1_id;
+}
+
+public int getQuestion_2_id() {
+	return question_2_id;
+}
+
+public void setQuestion_2_id(int question_2_id) {
+	this.question_2_id = question_2_id;
+}
+
+public int getQuestion_3_id() {
+	return question_3_id;
+}
+
+public void setQuestion_3_id(int question_3_id) {
+	this.question_3_id = question_3_id;
+}
+	
 }

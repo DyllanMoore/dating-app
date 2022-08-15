@@ -30,6 +30,12 @@ public class QuestionThree {
 	}
 
 
+	public QuestionThree(int question_3_id) {
+		super();
+		this.question_3_id = question_3_id;
+	}
+
+
 	public QuestionThree(int question_3_id, String answer) {
 		super();
 		this.question_3_id = question_3_id;

@@ -27,6 +27,11 @@ public class QuestionTwo {
 		// TODO Auto-generated constructor stub
 	}
 
+	public QuestionTwo(int question_2_id) {
+		super();
+		this.question_2_id = question_2_id;
+	}
+
 	public QuestionTwo(int question_2_id, String answer) {
 		super();
 		this.question_2_id = question_2_id;
