@@ -33,6 +33,11 @@ public class QuestionOne {
 		this.answer = answer;
 	}
 
+	public QuestionOne(int question_1_id) {
+		super();
+		this.question_1_id = question_1_id;
+	}
+
 	public QuestionOne(String answer) {
 		super();
 		this.answer = answer;
