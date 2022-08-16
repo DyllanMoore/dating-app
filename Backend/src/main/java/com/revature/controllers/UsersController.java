@@ -164,11 +164,12 @@ public class UsersController {
 				
 				String distanceStr = responseString.substring(start+9,end-3);
 				
-				Integer distance = Integer.valueOf(distanceStr.replace(",", ""));
+				Float distance = Float.valueOf(distanceStr.replace(",", ""));
 				System.out.println(distance);
 				
 				//Checking if current user is closer than 50 miles
 				if(distance < 50) {
+					u.setPassword(null);
 					u.setpfp(compressBytes(u.getpfp()));
 					nearbyUsers.add(u);
 				}
