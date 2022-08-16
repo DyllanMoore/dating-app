@@ -52,6 +52,13 @@ public class MatchController {
 		List<Match> matchList = mService.getLiked(id);
 		return ResponseEntity.ok(matchList);
 	}
+	
+	//Method for getting a user's mutual matches, place holder
+	@GetMapping("{id}")
+	public ResponseEntity<List<Match>> getMatches(@PathVariable("id") int id){
+		List<Match> matchList = mService.getMatches(id);
+		return null;
+	}
 
 	
 	
